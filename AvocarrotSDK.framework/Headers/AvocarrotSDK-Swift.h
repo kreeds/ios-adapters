@@ -132,12 +132,52 @@ SWIFT_CLASS("_TtC12AvocarrotSDK7AdError")
 - (NSString * _Nonnull)getCode;
 @end
 
+
+
+/// BaseModel Implementation
+SWIFT_CLASS("_TtC12AvocarrotSDK9BaseModel")
+@interface BaseModel : NSObject
+
+/// Initialize
+- (nonnull instancetype)initWithJsonObject:(NSDictionary<NSString *, id> * _Nonnull)jsonObject requestId:(NSString * _Nullable)requestId OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+/// AdModel implementation extending BaseModel
+SWIFT_CLASS("_TtC12AvocarrotSDK7AdModel")
+@interface AdModel : BaseModel
+
+/// \returns  the ad description
+- (NSString * _Nonnull)getDescription;
+
+/// \returns  the call to action text
+- (NSString * _Nonnull)getCTAText;
+
+/// \returns  the destination url
+- (NSString * _Nonnull)getDestinationUrl;
+
+/// \returns  the title
+- (NSString * _Nonnull)getTitle;
+
+/// \returns  the start rating (range [0.0,5.0])
+- (double)getRating;
+
+/// \returns  the ad main image url
+- (NSString * _Nonnull)getImage;
+
+/// \returns  the ad icon image url
+- (NSString * _Nonnull)getIcon;
+
+/// \returns  the adchoices model if the ad has one
+- (AdChoices * _Nullable)getAdChoices;
+- (nonnull instancetype)initWithJsonObject:(NSDictionary<NSString *, id> * _Nonnull)jsonObject requestId:(NSString * _Nullable)requestId OBJC_DESIGNATED_INITIALIZER;
+@end
+
 enum MediationType : NSInteger;
-@class CustomModel;
 @class UIView;
 @class TargetModel;
 enum LogLevel : NSInteger;
-@class BaseModel;
 
 
 /// Class that exposes AvocarrotCustom to Objc
@@ -149,8 +189,8 @@ SWIFT_CLASS_NAMED("AvocarrotCustomObjc")
 
 /// Register callback to be called when ad is loaded
 ///
-/// \param adloaded a function with void return type and a CustomModel as parameter
-- (AvocarrotCustom * _Nonnull)onAdLoaded:(void (^ _Nonnull)(NSArray<CustomModel *> * _Nonnull))adloaded;
+/// \param adloaded a function with void return type and a AdModel as parameter
+- (AvocarrotCustom * _Nonnull)onAdLoaded:(void (^ _Nonnull)(NSArray<AdModel *> * _Nonnull))adloaded;
 
 /// Register callback to be called on ad error
 ///
@@ -241,47 +281,6 @@ SWIFT_CLASS_NAMED("AvocarrotCustomObjc")
 - (void)removeClickListener:(UIView * _Nonnull)uiView;
 @end
 
-
-
-/// BaseModel Implementation
-SWIFT_CLASS("_TtC12AvocarrotSDK9BaseModel")
-@interface BaseModel : NSObject
-
-/// Initialize
-- (nonnull instancetype)initWithJsonObject:(NSDictionary<NSString *, id> * _Nonnull)jsonObject requestId:(NSString * _Nullable)requestId OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-/// CustomModel implementation extending BaseModel
-SWIFT_CLASS("_TtC12AvocarrotSDK11CustomModel")
-@interface CustomModel : BaseModel
-
-/// \returns  the ad description
-- (NSString * _Nonnull)getDescription;
-
-/// \returns  the call to action text
-- (NSString * _Nonnull)getCTAText;
-
-/// \returns  the destination url
-- (NSString * _Nonnull)getDestinationUrl;
-
-/// \returns  the title
-- (NSString * _Nonnull)getTitle;
-
-/// \returns  the start rating (range [0.0,5.0])
-- (double)getRating;
-
-/// \returns  the ad main image url
-- (NSString * _Nonnull)getImage;
-
-/// \returns  the ad icon image url
-- (NSString * _Nonnull)getIcon;
-
-/// \returns  the adchoices model if the ad has one
-- (AdChoices * _Nullable)getAdChoices;
-- (nonnull instancetype)initWithJsonObject:(NSDictionary<NSString *, id> * _Nonnull)jsonObject requestId:(NSString * _Nullable)requestId OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 /// Gender type based on the OpenRTB standard

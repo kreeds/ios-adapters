@@ -13,9 +13,9 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	weak public var delegate: MPNativeAdAdapterDelegate!
 	public var properties = [NSObject: AnyObject]()
 
-	let ad: CustomModel
+	let ad: AdModel
 	let avocarrotCustom: AvocarrotCustom
-	public init(avocarrotCustom: AvocarrotCustom, ad: CustomModel) {
+	public init(avocarrotCustom: AvocarrotCustom, ad: AdModel) {
 
 		self.ad = ad
 		self.avocarrotCustom = avocarrotCustom

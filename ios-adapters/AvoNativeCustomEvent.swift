@@ -26,8 +26,8 @@ public class AvoNativeCustomEvent: MPNativeCustomEvent {
 		guard let placementKey: String = (info["placementKey" as NSObject] as? String) else { reportError("No placement key!"); return }
 
 		let avoCustom = AvocarrotCustom(apiKey: apiKey, placementKey: placementKey)
-		avoCustom.onAdLoaded { (models: [CustomModel]) in
-			let ad = models.first!
+		avoCustom.onAdLoaded { (ads: [AdModel]) in
+			let ad = ads.first!
 			self.avoCustomAdapter = AvoCustomAdapter(avocarrotCustom: avoCustom, ad: ad)
 
 			let mopubAd = MPNativeAd(adAdapter: self.avoCustomAdapter)

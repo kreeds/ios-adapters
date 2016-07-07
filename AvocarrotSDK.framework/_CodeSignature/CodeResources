@@ -6,11 +6,11 @@
 	<dict>
 		<key>.DS_Store</key>
 		<data>
-		p57tnbWGIkrGmBrBVwiZLUlY/bk=
+		7qJ2yIIYdnrptwz09Ld2cLcgDqk=
 		</data>
 		<key>Headers/AvocarrotSDK-Swift.h</key>
 		<data>
-		XU+DgAXqaNk+kGVAyya9C8uzHDU=
+		oS+psHp2d2o95H9twpBJ2wE+gRc=
 		</data>
 		<key>Headers/AvocarrotSDK.h</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
-		Xt/TSzx59j/R2UhhdNiHp3afZak=
+		QvI9dUY4PjCJhiH9u1uHu3WYctk=
 		</data>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		LyRiwIjT4Svyn7h4zJk2ms86WLM=
+		68xzbj+iAhySwLMamzxttb2uBGM=
 		</data>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		DwAwqqJFbpOy6zi+hIlMoiRXWhc=
+		ZmW3uc4mzk2+cK0XSXy7L1EeRoE=
 		</data>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		ymsXc1OKgy3DEevqY3UjKMd4trc=
+		ftRnbHZpV3VzmzUOypVaHQzGrg0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -55,11 +55,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XU+DgAXqaNk+kGVAyya9C8uzHDU=
+			oS+psHp2d2o95H9twpBJ2wE+gRc=
 			</data>
 			<key>hash2</key>
 			<data>
-			/XOSv/MnSQ3Rtr15NDFVeh9SLJDzTr7asPuAu/UPuso=
+			+qcwoRghSDsDOM0indMCQX0+UgDS52geVeh0AUf4jNk=
 			</data>
 		</dict>
 		<key>Headers/AvocarrotSDK.h</key>
@@ -77,44 +77,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Xt/TSzx59j/R2UhhdNiHp3afZak=
+			QvI9dUY4PjCJhiH9u1uHu3WYctk=
 			</data>
 			<key>hash2</key>
 			<data>
-			xQZh+aMXUbDgumw/DWSTPTQ8jxvxAE6lB+Etjc73Y4U=
+			zLPhpeZbLrotqU0hFVI2HMp2SEoifH1XNEWMMzuVSyM=
 			</data>
 		</dict>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LyRiwIjT4Svyn7h4zJk2ms86WLM=
+			68xzbj+iAhySwLMamzxttb2uBGM=
 			</data>
 			<key>hash2</key>
 			<data>
-			DHtDXgFRimHuyab5wTo0UGafDi8dklKaR3xn7av/eIg=
+			Op2RVA3IWSAEe1Q2r3D6acdKhSEbkOYZVlUhDNBUSbc=
 			</data>
 		</dict>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DwAwqqJFbpOy6zi+hIlMoiRXWhc=
+			ZmW3uc4mzk2+cK0XSXy7L1EeRoE=
 			</data>
 			<key>hash2</key>
 			<data>
-			KMkcSw6aocmoKYNgmGEuWdSL3hZxfypw3Ff6bYht8Iw=
+			i+jwmGSCQFU5QfapMq6nbhm0vgb2l47jGF4Liycf6dk=
 			</data>
 		</dict>
 		<key>Modules/AvocarrotSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ymsXc1OKgy3DEevqY3UjKMd4trc=
+			ftRnbHZpV3VzmzUOypVaHQzGrg0=
 			</data>
 			<key>hash2</key>
 			<data>
-			MlmEh79QWPtylgFxDCguxQkjr2yEJCRX9qGtuzobZdU=
+			Kz3wVwrJrb1IfIneBpPOPdHUmqBq8teVyikAzMtwXCk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
