@@ -10,7 +10,7 @@ For any technical help or questions, please get in touch with [support](https://
 * [Mopub](#mopub)
   * [1. Setup SDKs](#1-setup-sdks)
   * [2. Setup Mopub Dashboard](#2-setup-mopub-dashboard)
-  * [3. Native](#3-native)
+  * [3. Native](#3-native-ad-units)
   * [4. Ready to GO!](#4-ready-to-go)
 * [Troubleshooting](#troubleshooting)
 
