@@ -10,7 +10,7 @@ For any technical help or questions, please get in touch with [support](https://
 * [Mopub](#mopub)
   * [1. Setup SDKs](#1-setup-sdks)
   * [2. Setup Mopub Dashboard](#2-setup-mopub-dashboard)
-  * [3. Native](#3-native-ad-units)
+  * [3. Native ad Units](#3-native-ad-units)
   * [4. Ready to GO!](#4-ready-to-go)
 * [Troubleshooting](#troubleshooting)
 
@@ -73,3 +73,12 @@ Please note that for `Mopub Native` you should create an `Avocarrot "Create your
 #### 4. Ready to GO!
 
 Congratulations! You have now successfully integrated **Avocarrot** and you should have received your first ad.
+
+#### Troubleshooting
+
+- Please have in mind, that any time you make a change to the Mopub dashboard, try to fetch an ad a couple times and then wait a few minutes for Mopub's cache to clear.
+- You can also try cloning the example project below to make sure everything is running ok
+- If at any point you need any technical help, please get in touch with [support] (https://app.avocarrot.com/#/docs/contact)
+
+### Clone the Example Project
+* git clone https://github.com/Avocarrot/ios-adapters.git
