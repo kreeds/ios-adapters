@@ -48,8 +48,8 @@ Create an "Avocarrot" `Network` in Mopub's dashboard and connect it to your Ad U
 ===
 
 
-#### b) Native
-For Native Ad Units (such as `List`, `Feed` in Avocarrot's Dashboard => `Native (Custom Layout)` Format in Mopub) you need to :
+#### 3) Native ad Units
+For Native Ad Units you need to :
 
 - Complete the following in Mopub Dashboard:
 
@@ -70,6 +70,6 @@ Please note that for `Mopub Native` you should create an `Avocarrot "Create your
 
 ===
 
-#### 3. Ready to GO!
+#### 4. Ready to GO!
 
 Congratulations! You have now successfully integrated **Avocarrot** and you should have received your first ad.
