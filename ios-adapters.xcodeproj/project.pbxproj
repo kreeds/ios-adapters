@@ -12,8 +12,8 @@
 		100EA72F1D1145CF0086D858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100EA72D1D1145CF0086D858 /* Main.storyboard */; };
 		100EA7311D1145CF0086D858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100EA7301D1145CF0086D858 /* Assets.xcassets */; };
 		100EA7341D1145CF0086D858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100EA7321D1145CF0086D858 /* LaunchScreen.storyboard */; };
-		1010C3831D25634200CE6D13 /* AvocarrotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1010C3821D25634200CE6D13 /* AvocarrotSDK.framework */; };
-		1010C3841D25634200CE6D13 /* AvocarrotSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1010C3821D25634200CE6D13 /* AvocarrotSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		105C6A011D88E789002486DD /* AvocarrotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105C6A001D88E789002486DD /* AvocarrotSDK.framework */; };
+		105C6A021D88E789002486DD /* AvocarrotSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 105C6A001D88E789002486DD /* AvocarrotSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		109B218D1D114B4400236060 /* AdTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B218C1D114B4400236060 /* AdTableCell.swift */; };
 		109B21901D114FCC00236060 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B218F1D114FCC00236060 /* TableViewController.swift */; };
 		109B21931D11504F00236060 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109B21921D11504F00236060 /* SampleModel.swift */; };
@@ -31,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1010C3841D25634200CE6D13 /* AvocarrotSDK.framework in Embed Frameworks */,
+				105C6A021D88E789002486DD /* AvocarrotSDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,7 +47,7 @@
 		100EA7331D1145CF0086D858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		100EA7351D1145CF0086D858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1010C3801D2561FA00CE6D13 /* AvocarrotSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AvocarrotSDK.framework; sourceTree = "<group>"; };
-		1010C3821D25634200CE6D13 /* AvocarrotSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AvocarrotSDK.framework; sourceTree = "<group>"; };
+		105C6A001D88E789002486DD /* AvocarrotSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AvocarrotSDK.framework; sourceTree = "<group>"; };
 		109B218C1D114B4400236060 /* AdTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdTableCell.swift; sourceTree = "<group>"; };
 		109B218F1D114FCC00236060 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		109B21921D11504F00236060 /* SampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40A4B3CD06990F2BA82919E /* Pods_ios_adapters.framework in Frameworks */,
-				1010C3831D25634200CE6D13 /* AvocarrotSDK.framework in Frameworks */,
+				105C6A011D88E789002486DD /* AvocarrotSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		100EA71D1D1145CF0086D858 = {
 			isa = PBXGroup;
 			children = (
-				1010C3821D25634200CE6D13 /* AvocarrotSDK.framework */,
+				105C6A001D88E789002486DD /* AvocarrotSDK.framework */,
 				100EA7281D1145CF0086D858 /* ios-adapters */,
 				100EA7271D1145CF0086D858 /* Products */,
 				B26E2850D63D0776674C59F6 /* Pods */,
@@ -167,6 +167,7 @@
 					100EA7251D1145CF0086D858 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EH45XCXFQM;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -390,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "avocarrot.com.ios-adapters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -412,6 +414,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "avocarrot.com.ios-adapters";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
