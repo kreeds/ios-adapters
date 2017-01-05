@@ -2,7 +2,7 @@ import Foundation
 import mopub_ios_sdk
 import AvocarrotSDK
 @objc(AvoCustomAdapter)
-public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
+open class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	/**
 	 * Provides a dictionary of all publicly accessible assets (such as title and text) for the
 	 * native ad.
@@ -10,8 +10,8 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	 * When possible, you should place values in the returned dictionary such that they correspond to
 	 * the pre-defined keys in the MPNativeAdConstants header file.
 	 */
-	weak public var delegate: MPNativeAdAdapterDelegate!
-	public var properties = [NSObject: AnyObject]()
+	weak open var delegate: MPNativeAdAdapterDelegate!
+	open var properties = [AnyHashable: Any]()
 
 	let ad: AdModel
 	let avocarrotCustom: AvocarrotCustom
@@ -35,7 +35,7 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	 * This may safely be set to nil if your network doesn't expose this value (for example, it may only
 	 * provide a method to handle a click, lacking another for retrieving the URL itself).
 	 */
-	public let defaultActionURL: NSURL? = nil
+	open let defaultActionURL: URL? = nil
 
 	/**
 	 * Determines whether MPNativeAd should track clicks
@@ -44,7 +44,7 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	 * If this returns YES, then MPNativeAd will defer to the MPNativeAdAdapterDelegate callbacks to
 	 * track clicks.
 	 */
-	public func enableThirdPartyClickTracking() -> Bool {
+	open func enableThirdPartyClickTracking() -> Bool {
 		return true
 	}
 
@@ -59,7 +59,7 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	 * of this event.
 	 */
 
-	public func willAttachToView(view: UIView!) {
+	open func willAttach(to view: UIView!) {
 		avocarrotCustom.bindView(view, ad: ad)
 		avocarrotCustom.registerClickListener(view, ad: ad)
 
@@ -67,7 +67,7 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	/*
 	 Informs Mopub for the clicked registered
 	 */
-	public func registerClickToMopub() {
+	open func registerClickToMopub() {
 		guard let nativeAdDidClick = delegate.nativeAdDidClick else { print("Delegate does not implement click tracking callback. Clicks likely not being tracked."); return }
 		nativeAdDidClick(self)
 	}
@@ -75,7 +75,7 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	/*
 	 Informs Mopub for the impression registered
 	 */
-	public func registerImpressionToMopub() {
+	open func registerImpressionToMopub() {
 		guard let nativeAdWillLogImpression = delegate.nativeAdWillLogImpression else { print("Delegate does not implement click tracking callback. Clicks likely not being tracked."); return }
 		nativeAdWillLogImpression(self)
 	}
@@ -83,14 +83,14 @@ public class AvoCustomAdapter: NSObject, MPNativeAdAdapter {
 	/*
 	 Informs Mopub that the web view is closed
 	 */
-	public func registerFinishHandlingClickToMopub() {
-		delegate.nativeAdDidDismissModalForAdapter(self)
+	open func registerFinishHandlingClickToMopub() {
+		delegate.nativeAdDidDismissModal(for: self)
 	}
 
 	/*
 	 Provides the adchoices view to mopub
 	 */
-	public func privacyInformationIconView() -> UIView! {
+	open func privacyInformationIconView() -> UIView! {
 		let adChoicesView = UIImageView()
 		if let adChoices = ad.getAdChoices() {
 			adChoicesView.loadImage(adChoices.getIconUrl())
