@@ -17,12 +17,12 @@ class SampleTableCell: UITableViewCell {
 		super.awakeFromNib()
 		// Initialization code
 	}
-	func loadWithSampleModel(sampleModel: SampleModel) {
+	func loadWithSampleModel(_ sampleModel: SampleModel) {
 		adTitle.text = sampleModel.getTitle()
 		adText.text = sampleModel.getText()
 		adImage.loadImage(sampleModel.getImageUrl())
 	}
-	override func setSelected(selected: Bool, animated: Bool) {
+	override func setSelected(_ selected: Bool, animated: Bool) {
 		super.setSelected(selected, animated: animated)
 
 		// Configure the view for the selected state

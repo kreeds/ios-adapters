@@ -1,9 +1,8 @@
 import Foundation
-//import mopub_ios_sdk
 import mopub_ios_sdk
 import AvocarrotSDK
 @objc(AvoNativeCustomEvent)
-public class AvoNativeCustomEvent: MPNativeCustomEvent {
+open class AvoNativeCustomEvent: MPNativeCustomEvent {
 
 	var avoCustomAdapter: AvoCustomAdapter?
 
@@ -20,37 +19,31 @@ public class AvoNativeCustomEvent: MPNativeCustomEvent {
 	 * request. This data is configurable on the MoPub website, and may be used to pass dynamic
 	 * information, such as publisher IDs.
 	 */
-	public override func requestAdWithCustomEventInfo(info: [NSObject: AnyObject]!) {
+	open override func requestAd(withCustomEventInfo info: [AnyHashable: Any]!) {
 
 		guard let apiKey = (info["apiKey" as NSObject] as? String) else { reportError("No Api key!"); return }
 		guard let placementKey: String = (info["placementKey" as NSObject] as? String) else { reportError("No placement key!"); return }
 
-		let avoCustom = AvocarrotCustom(apiKey: apiKey, placementKey: placementKey, mediationType: .Mopub)
+		let avoCustom = AvocarrotCustom(apiKey: apiKey, placementKey: placementKey, mediationType: .mopub)
 		avoCustom.onAdLoaded { (ads: [AdModel]) in
 			let ad = ads.first!
 			self.avoCustomAdapter = AvoCustomAdapter(avocarrotCustom: avoCustom, ad: ad)
 
 			let mopubAd = MPNativeAd(adAdapter: self.avoCustomAdapter)
 
-			var images = [NSURL]()
-			if !ad.getIcon().isEmpty {
-				images.append(NSURL(string: ad.getIcon())!)
-			}
+			let images = self.getImageUrls(urlStrings: [ad.getIcon(),ad.getImage()])
+            
 
-			if !ad.getImage().isEmpty {
-				images.append(NSURL(string: ad.getImage())!)
-			}
-
-			super.precacheImagesWithURLs(images, completionBlock: { (error: [AnyObject]!) in
+			super.precacheImages(withURLs: images, completionBlock: { (error: [Any]?) in
 				if ((error) != nil) {
 					self.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForImageDownloadFailure())
 				} else {
-					self.delegate.nativeCustomEvent(self, didLoadAd: mopubAd)
+					self.delegate.nativeCustomEvent(self, didLoad: mopubAd)
 				}
 			})
 
 		}.onAdError { (error: AdError) in
-			if (error.getCode() == StatusCode.NoAdServed.code) {
+			if (error.getCode() == StatusCode.noAdServed.code) {
 				self.delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForNoInventory())
 			} else {
 				self.reportError("Avocarrot ad load error!")
@@ -61,14 +54,57 @@ public class AvoNativeCustomEvent: MPNativeCustomEvent {
 			self.avoCustomAdapter?.registerClickToMopub()
 		}.onAdWebViewClosed {
 			self.avoCustomAdapter?.registerFinishHandlingClickToMopub()
-		}.withLogging(true, logLevel: LogLevel.Debug)
-			.withSandbox(false)
-			.loadAd()
+		}
+        .loadAd()
 
 	}
 
-	func reportError(msg: String) {
+	func reportError(_ msg: String) {
 		delegate.nativeCustomEvent(self, didFailToLoadAdWithError: MPNativeAdNSErrorForInvalidAdServerResponse(msg))
 	}
+    
+    /**
+     Removes escape characters from the `urlString` and return an URL object.
+     
+     - Parameter urlString: string of the url
+     - Returns: URL object
+     */
+    func escapeUrl(urlString:String) -> URL?  {
+        guard let escapedUrl = urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) else {
+            return nil
+        }
+        
+        return  URL(string: escapedUrl)
+    }
+    
+    /**
+     Transforms string urls to URL objects.
+     
+     - Parameter urlStrings: array of string urls
+     - Returns: URL array object
+
+    */
+    func getImageUrls(urlStrings:[String]) -> [URL] {
+        var images = [URL]()
+        for urlString in urlStrings {
+            if urlString.isEmpty {
+                continue
+            }
+            var url = URL(string: urlString)
+            
+            if url == nil {
+                url = escapeUrl(urlString: urlString)
+            }
+            
+            guard let safeUrl = url  else {
+                continue
+            }
+            
+            images.append(safeUrl)
+            
+        }
+        return images
+    }
+    
 
 }

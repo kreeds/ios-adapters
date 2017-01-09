@@ -14,10 +14,10 @@ class TableViewController: UITableViewController {
 		let staticSettings = MPStaticNativeAdRendererSettings()
 		staticSettings.renderingViewClass = NativeAdCell.self
 		staticSettings.viewSizeHandler = { (maxWidth: CGFloat) -> CGSize in
-			return CGSizeMake(maxWidth, 110)
+			return CGSize(width: maxWidth, height: 110)
 		}
-		let staticConfiguration = MPStaticNativeAdRenderer.rendererConfigurationWithRendererSettings(staticSettings)
-		staticConfiguration.supportedCustomEvents = ["AvoNativeCustomEvent"]
+		let staticConfiguration = MPStaticNativeAdRenderer.rendererConfiguration(with: staticSettings)
+		staticConfiguration?.supportedCustomEvents = ["AvoNativeCustomEvent"]
 
 		// Setup the ad placer.
 		placer = MPTableViewAdPlacer(tableView: tableView, viewController: self, rendererConfigurations: [staticConfiguration])
@@ -27,7 +27,7 @@ class TableViewController: UITableViewController {
 		targeting.desiredAssets = Set([kAdIconImageKey, kAdMainImageKey, kAdCTATextKey, kAdTextKey, kAdTitleKey])
 
 		// Begin loading ads and placing them into your feed, using the ad unit ID.
-		placer.loadAdsForAdUnitID("ae86d7eec92940ccb73da43ecf9a6efa")
+		placer.loadAds(forAdUnitID: "ae86d7eec92940ccb73da43ecf9a6efa")
 	}
 
 	func loadSampleAds() {
@@ -43,16 +43,16 @@ class TableViewController: UITableViewController {
 	}
 
 	// MARK: - Table view data source
-	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+	override func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return sampleData.count
 	}
 
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.mp_dequeueReusableCellWithIdentifier("SampleTableCell", forIndexPath: indexPath) as! UITableViewCell
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.mp_dequeueReusableCell(withIdentifier: "SampleTableCell", for: indexPath) as! UITableViewCell
 
 		if let sampleCell = cell as? SampleTableCell {
 			let sampleModel = sampleData[indexPath.row]
