@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 import AvocarrotSDK
-import mopub_ios_sdk
+import MoPub
 class TableViewController: UITableViewController {
 
 	var sampleData = [SampleModel]()

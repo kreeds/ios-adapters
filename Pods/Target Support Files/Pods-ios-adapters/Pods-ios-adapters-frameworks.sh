@@ -89,10 +89,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/mopub-ios-sdk/mopub_ios_sdk.framework"
+  install_framework "${PODS_ROOT}/AvocarrotSDK/AvocarrotUniversalSDK/AvocarrotSDK.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/mopub-ios-sdk/MoPub.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/mopub-ios-sdk/mopub_ios_sdk.framework"
+  install_framework "${PODS_ROOT}/AvocarrotSDK/AvocarrotUniversalSDK/AvocarrotSDK.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/mopub-ios-sdk/MoPub.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

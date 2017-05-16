@@ -1,5 +1,5 @@
 import Foundation
-import mopub_ios_sdk
+import MoPub
 import AvocarrotSDK
 @objc(AvoNativeCustomEvent)
 open class AvoNativeCustomEvent: MPNativeCustomEvent {
@@ -54,7 +54,7 @@ open class AvoNativeCustomEvent: MPNativeCustomEvent {
 			self.avoCustomAdapter?.registerClickToMopub()
 		}.onAdWebViewClosed {
 			self.avoCustomAdapter?.registerFinishHandlingClickToMopub()
-		}
+		}.withSandbox(true)
         .loadAd()
 
 	}

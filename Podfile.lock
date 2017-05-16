@@ -1,14 +1,17 @@
 PODS:
-  - mopub-ios-sdk (4.7.0):
-    - mopub-ios-sdk/MoPubSDK (= 4.7.0)
-  - mopub-ios-sdk/MoPubSDK (4.7.0)
+  - AvocarrotSDK (4.4.2)
+  - mopub-ios-sdk (4.14.0):
+    - mopub-ios-sdk/MoPubSDK (= 4.14.0)
+  - mopub-ios-sdk/MoPubSDK (4.14.0)
 
 DEPENDENCIES:
+  - AvocarrotSDK
   - mopub-ios-sdk
 
 SPEC CHECKSUMS:
-  mopub-ios-sdk: e46b277cdb77b1745567b419742f77fed6865262
+  AvocarrotSDK: ffd4ebe641229def7c830723a724cd676c0f4bf1
+  mopub-ios-sdk: 7f08192469c06842a9354d972db32acd18127ae0
 
-PODFILE CHECKSUM: fb039e4c15626874a28550e04eda80315045678c
+PODFILE CHECKSUM: 98fcaf7970b6c5762f8a2ee23d086c2ba2df23cd
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.2.1

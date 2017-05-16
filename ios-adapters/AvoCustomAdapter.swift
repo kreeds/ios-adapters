@@ -1,5 +1,5 @@
 import Foundation
-import mopub_ios_sdk
+import MoPub
 import AvocarrotSDK
 @objc(AvoCustomAdapter)
 open class AvoCustomAdapter: NSObject, MPNativeAdAdapter {

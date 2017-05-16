@@ -1,5 +1,5 @@
 import UIKit
-import mopub_ios_sdk
+import MoPub
 class NativeAdCell: UITableViewCell, MPNativeAdRendering {
 
 	// MARK: Properties
