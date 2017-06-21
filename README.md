@@ -1,5 +1,6 @@
 <img width="300" src="https://cloud.githubusercontent.com/assets/1907604/7618436/f8c371de-f9a9-11e4-8846-772f67f53513.jpg"/>
 
+Adapters implementation of deprecated Avocarrot SDK 4.0
 
 # ios-adapters
 Example project on how to use the Avocarrot SDK with other Ad Networks, in your iOS projects.
