@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R5T-6e-aaY">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="J2T-sG-kac">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="R5T-6e-aaY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A7E-KO-Ydc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hob-MU-fEI" kind="relationship" relationship="rootViewController" id="9Hq-0G-xi7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zox-aT-z8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="346"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QBi-CT-z1a">
+            <objects>
+                <viewController id="hob-MU-fEI" customClass="ViewController" customModule="AvocarrotSDKAdapters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QqL-lT-ntC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cuh-UC-GKW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1T3-8U-aPA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nf-va-oNq">
+                                <rect key="frame" x="59" y="303" width="256" height="60"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.40392156862745099" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="EVw-Y9-Hta"/>
+                                    <constraint firstAttribute="width" constant="256" id="smw-hc-6yD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="MoPub Adapter">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jNe-hT-XWo" kind="show" id="9Jj-mk-raZ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avocarrot-logo" translatesAutoresizingMaskIntoConstraints="NO" id="mJd-QV-L2j">
+                                <rect key="frame" x="10" y="32" width="355" height="74"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HU-7g-AhH">
+                                <rect key="frame" x="59" y="387" width="256" height="60"/>
+                                <color key="backgroundColor" red="0.94117647058823528" green="0.40392156862745099" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="RzY-DD-7oh"/>
+                                    <constraint firstAttribute="width" constant="256" id="kvD-xb-bOs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="GoogleMobileAds Adapter">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lPs-p7-lZP" kind="show" id="bxj-ik-gBl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Nf-va-oNq" firstAttribute="centerX" secondItem="1T3-8U-aPA" secondAttribute="centerX" id="0dG-rz-HfT"/>
+                            <constraint firstItem="6Nf-va-oNq" firstAttribute="centerY" secondItem="1T3-8U-aPA" secondAttribute="centerY" id="1kg-cj-b41"/>
+                            <constraint firstItem="6HU-7g-AhH" firstAttribute="centerX" secondItem="1T3-8U-aPA" secondAttribute="centerX" id="CM8-oO-fnz"/>
+                            <constraint firstItem="mJd-QV-L2j" firstAttribute="top" secondItem="1T3-8U-aPA" secondAttribute="top" constant="32" id="FGS-WZ-B7C"/>
+                            <constraint firstItem="6HU-7g-AhH" firstAttribute="top" secondItem="6Nf-va-oNq" secondAttribute="bottom" constant="24" id="efR-Hc-Nhg"/>
+                            <constraint firstAttribute="trailing" secondItem="mJd-QV-L2j" secondAttribute="trailing" constant="10" id="jAe-4b-utQ"/>
+                            <constraint firstItem="mJd-QV-L2j" firstAttribute="leading" secondItem="1T3-8U-aPA" secondAttribute="leading" constant="10" id="kKs-Iq-NkG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DRE-po-O8i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="74K-wT-1tf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="346"/>
+        </scene>
+        <!--Mo Pub Table View Controller-->
+        <scene sceneID="TNK-dk-xeT">
+            <objects>
+                <tableViewController id="jNe-hT-XWo" customClass="MoPubTableViewController" customModule="AvocarrotSDKAdapters" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="87" sectionHeaderHeight="28" sectionFooterHeight="28" id="zeD-ny-8k5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SampleTableCell" rowHeight="87" id="12Y-r0-Mit" customClass="SampleTableCell" customModule="AvocarrotSDKAdapters" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="87"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="12Y-r0-Mit" id="n2K-XV-Jss">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNK-if-l24">
+                                            <rect key="frame" x="99" y="3" width="268" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="IV5-uH-sBQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-01-csd">
+                                            <rect key="frame" x="8" y="3" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="Nf8-ae-pRG"/>
+                                                <constraint firstAttribute="width" constant="80" id="XFY-on-f7a"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUc-ye-5GH">
+                                            <rect key="frame" x="99" y="37" width="268" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="fDV-s7-IVZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.94117647058823528" green="0.40392156862745099" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HNK-if-l24" firstAttribute="top" secondItem="n2K-XV-Jss" secondAttribute="top" constant="3" id="AWg-Fq-nfo"/>
+                                        <constraint firstItem="HNK-if-l24" firstAttribute="leading" secondItem="mKK-01-csd" secondAttribute="trailing" constant="11" id="F4H-rj-nRy"/>
+                                        <constraint firstItem="bUc-ye-5GH" firstAttribute="bottom" secondItem="n2K-XV-Jss" secondAttribute="bottomMargin" id="N4q-rg-sJ7"/>
+                                        <constraint firstItem="mKK-01-csd" firstAttribute="centerY" secondItem="n2K-XV-Jss" secondAttribute="centerY" id="dq2-QX-Ueq"/>
+                                        <constraint firstItem="bUc-ye-5GH" firstAttribute="trailing" secondItem="n2K-XV-Jss" secondAttribute="trailingMargin" id="n6y-CD-uS9"/>
+                                        <constraint firstAttribute="trailing" secondItem="HNK-if-l24" secondAttribute="trailing" constant="8" id="o9O-sV-uto"/>
+                                        <constraint firstItem="mKK-01-csd" firstAttribute="leading" secondItem="n2K-XV-Jss" secondAttribute="leading" constant="8" id="wCG-0W-TiD"/>
+                                        <constraint firstItem="bUc-ye-5GH" firstAttribute="leading" secondItem="mKK-01-csd" secondAttribute="trailing" constant="11" id="zCf-XH-VZQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="adImage" destination="mKK-01-csd" id="7GZ-6H-nzQ"/>
+                                    <outlet property="adText" destination="bUc-ye-5GH" id="Oj0-L6-l35"/>
+                                    <outlet property="adTitle" destination="HNK-if-l24" id="yVh-nB-7Jd"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jNe-hT-XWo" id="Nyk-sH-6j5"/>
+                            <outlet property="delegate" destination="jNe-hT-XWo" id="Y87-aE-jCq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="LEZ-NK-OSu"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ec-A4-iiv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="346"/>
+        </scene>
+        <!--Interstitial-->
+        <scene sceneID="HQM-p0-yUJ">
+            <objects>
+                <viewController id="dzU-uw-e7R" customClass="GoogleMobileAdsInterstitialViewController" customModule="AvocarrotSDKAdapters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Ep-CU-vWi"/>
+                        <viewControllerLayoutGuide type="bottom" id="mfr-H6-ENq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cb5-hk-wcR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.85211267609999997" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Interstitial" id="mxh-tY-PUL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YS0-Lm-YgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="1972"/>
+        </scene>
+        <!--Banner-->
+        <scene sceneID="Xzf-jx-Sfj">
+            <objects>
+                <viewController id="a3M-oe-Ieo" customClass="GoogleMobileAdsBannerViewController" customModule="AvocarrotSDKAdapters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vgi-ce-tVX"/>
+                        <viewControllerLayoutGuide type="bottom" id="GMb-zq-1lt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ibo-im-a4x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-Fy-HpD" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="114" width="320" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="V0G-ox-fUM"/>
+                                    <constraint firstAttribute="height" constant="50" id="fCy-3F-myH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.85211267609999997" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MDH-Fy-HpD" firstAttribute="centerX" secondItem="ibo-im-a4x" secondAttribute="centerX" id="9qN-tw-Mig"/>
+                            <constraint firstItem="MDH-Fy-HpD" firstAttribute="top" secondItem="vgi-ce-tVX" secondAttribute="bottom" constant="50" id="o8W-lU-oAT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Banner" id="9ex-V5-gBg"/>
+                    <connections>
+                        <outlet property="bannerView" destination="MDH-Fy-HpD" id="geT-if-t6B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="403-9z-Vbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="1973"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="g2M-2S-Jlb">
+            <objects>
+                <tabBarController id="lPs-p7-lZP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="cyG-4w-6eI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.85211267609999997" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.94117647058823528" green="0.40392156862745099" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.94117647058823528" green="0.40392156862745099" blue="0.24705882352941178" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="a3M-oe-Ieo" kind="relationship" relationship="viewControllers" id="UzI-nP-S3P"/>
+                        <segue destination="dzU-uw-e7R" kind="relationship" relationship="viewControllers" id="xBk-hq-qCF"/>
+                        <segue destination="FMd-j6-8hs" kind="relationship" relationship="viewControllers" id="Z5c-j4-qZ7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vm0-93-2eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="1136"/>
+        </scene>
+        <!--Native-->
+        <scene sceneID="mS0-fZ-N3g">
+            <objects>
+                <viewController id="FMd-j6-8hs" customClass="GoogleMobileAdsNativeViewController" customModule="AvocarrotSDKAdapters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gi1-XF-H39"/>
+                        <viewControllerLayoutGuide type="bottom" id="zuP-yj-Taf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jmT-9k-I8I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nha-td-MVm" customClass="GADNativeExpressAdView">
+                                <rect key="frame" x="27.5" y="318" width="320" height="300"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="btp-eG-3yV"/>
+                                    <constraint firstAttribute="height" constant="300" id="wDL-fs-zp2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.85211267609999997" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nha-td-MVm" firstAttribute="centerX" secondItem="jmT-9k-I8I" secondAttribute="centerX" id="h8I-ua-eon"/>
+                            <constraint firstItem="zuP-yj-Taf" firstAttribute="top" secondItem="nha-td-MVm" secondAttribute="bottom" id="yCl-h9-KDu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Native" id="2DN-lz-O3Q"/>
+                    <connections>
+                        <outlet property="nativeExpressAdView" destination="nha-td-MVm" id="aBr-rb-EmN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MC6-e9-rJe" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1761" y="1972"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avocarrot-logo" width="360" height="74"/>
+    </resources>
+</document>
